@@ -21,8 +21,9 @@ public class AActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
             Explode explode = new Explode();
-            explode.setDuration(5000);
-            getWindow().setExitTransition(new Explode());
+            explode.setDuration(1000);
+//            explode.setStartDelay(2000);
+            getWindow().setExitTransition(explode);
         }
         setContentView(R.layout.activity_a);
 
@@ -33,11 +34,9 @@ public class AActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(activity, BActivity.class);
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-
-//                    startActivity(intent);
-//                    ActivityOptions.makeSceneTransitionAnimation();
-
-                    startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(activity).toBundle());
+                    startActivity(intent, ActivityOptions
+                            .makeSceneTransitionAnimation(activity)
+                            .toBundle());
                 }else {
                     startActivity(intent);
                 }
