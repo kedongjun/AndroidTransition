@@ -1,0 +1,46 @@
+# apk 文件
+*.apk
+*.ap_
+
+# Dalvik 虚拟机文件
+*.dex
+
+# java 编译文件
+*.class
+
+# 项目编译产生的文件或目录
+bin/
+gen/
+out/
+
+# gradle 文件
+.gradle/
+build/
+local.properties
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+# Eclipse 混淆文件
+proguard/
+
+# 日志文件
+*.log
+
+# Android Studio Navigation，captures 目录
+.navigation/
+captures/
+
+# Intellij 文件或目录
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Keystore 文件
+*.jks
+
+# mac 系统产生的文件或目录
+.DS_Store
